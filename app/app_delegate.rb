@@ -4,6 +4,12 @@ class AppDelegate
     @window.rootViewController = MainController.new
 
     @window.makeKeyAndVisible
+
+    @audio_controller = AEAudioController.alloc.initWithAudioDescription(
+      AEAudioController.nonInterleaved16BitStereoAudioDescription,
+      inputEnabled:true)
+
+    @audio_controller.createChannelGroup
     true
   end
 end
