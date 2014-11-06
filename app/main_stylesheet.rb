@@ -2,6 +2,10 @@ class MainStylesheet < RubyMotionQuery::Stylesheet
 
   def my_view(st)
     st.background_color = color.white
+
+    # assign the styler as a global variable
+    # to demo the RubyMotion REPL
+    $view_styler = st
   end
 
   def my_button(st)
