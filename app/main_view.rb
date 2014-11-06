@@ -1,5 +1,9 @@
 class MainView < UIView
-  attr_accessor :sides
+
+  def sides=(num_sides)
+    @sides = num_sides
+    setNeedsDisplay
+  end
 
   def drawRect(rect)
     red = rand
@@ -14,8 +18,8 @@ class MainView < UIView
     if @sides
       r = 100
       @sides.times.each do |n|
-        x = (r * Math.cos(2*Math::PI*n/@sides)) + center.x
-        y = (r * Math.sin(2*Math::PI*n/@sides)) + center.y
+        x = (r * Math.cos(2 * Math::PI * n / @sides)) + center.x
+        y = (r * Math.sin(2 * Math::PI * n / @sides)) + center.y
         if n == 0
           path.moveToPoint(CGPointMake(x, y))
         else
