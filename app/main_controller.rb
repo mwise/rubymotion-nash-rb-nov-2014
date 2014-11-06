@@ -15,7 +15,7 @@ class MainController < UIViewController
 
     # create 4 buttons and hook up listeners
     3.upto(6) do |i|
-      button = rmq.append(UIButton.buttonWithType(UIButtonTypeRoundedRect), :my_button).get
+      button = rmq.append(UIButton, :my_button).get
       button.setTitle("#{i}", forState:UIControlStateNormal)
       button.rmq.on(:tap) { view.sides = i }
     end
