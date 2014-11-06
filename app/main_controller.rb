@@ -1,12 +1,15 @@
 class MainController < UIViewController
 
+  # specify the view class we want to use
   def loadView
     self.view = MainView.alloc.init
   end
 
   def viewDidLoad
+    # apply some style to the whole view
     view.backgroundColor = UIColor.whiteColor
 
+    # add some buttons
     @button_1 = UIButton.buttonWithType(UIButtonTypeRoundedRect)
     @button_1.frame = [[10,30],[37,37]]
     @button_1.setTitle("3", forState:UIControlStateNormal)
@@ -40,11 +43,13 @@ class MainController < UIViewController
     view.addSubview(@button_4)
   end
 
+  # touch event handler
   def touch_up_inside(sender = nil, event = nil)
     sides = sender.titleForState(UIControlStateNormal)
     draw_polygon(sides.to_i)
   end
 
+  # modify the view and queue it for redrawing
   def draw_polygon(sides)
     view.sides = sides
     view.setNeedsDisplay
