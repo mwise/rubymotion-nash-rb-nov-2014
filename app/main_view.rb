@@ -1,4 +1,5 @@
 class MainView < UIView
+
   attr_accessor :sides
 
   # override iOS rendering method
@@ -31,4 +32,5 @@ class MainView < UIView
       path.fill
     end
   end
+
 end
