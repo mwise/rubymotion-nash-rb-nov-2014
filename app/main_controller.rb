@@ -1,9 +1,10 @@
 class MainController < UIViewController
+
   def loadView
     self.view = MainView.alloc.init
   end
 
- def viewDidLoad
+  def viewDidLoad
     view.backgroundColor = UIColor.whiteColor
 
     @button_1 = UIButton.buttonWithType(UIButtonTypeRoundedRect)
