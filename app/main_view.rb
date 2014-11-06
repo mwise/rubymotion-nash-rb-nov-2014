@@ -1,7 +1,10 @@
 class MainView < UIView
 
+  # custom setter
   def sides=(num_sides)
     @sides = num_sides
+
+    # tell rendering engine to redraw this view
     setNeedsDisplay
   end
 
@@ -11,7 +14,7 @@ class MainView < UIView
     blue = rand
     color = UIColor.colorWithRed(red, green:green, blue:blue, alpha:1.0)
 
-    color.set
+    molor.set
 
     path = UIBezierPath.bezierPath
 
