@@ -9,15 +9,13 @@ class MainView < UIView
   end
 
   def drawRect(rect)
-    red = rand
-    green = rand
-    blue = rand
-    color = UIColor.colorWithRed(red, green:green, blue:blue, alpha:1.0)
+    # use a random color for drawing
+    rmq.color.random.set
 
-    molor.set
-
+    # create a path
     path = UIBezierPath.bezierPath
 
+    # draw the polygon
     if @sides
       r = 100
       @sides.times.each do |n|
