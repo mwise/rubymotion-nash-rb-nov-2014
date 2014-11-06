@@ -3,10 +3,11 @@ rubymotion-nash-rb-nov-2014
 
 Example code for my RubyMotion presentation at Nash.rb in November 2014 
 
-Requirements:
+
+## Requirements:
 - RubyMotion
 
-Usage:
+## Usage:
 
 ### branch 'master'
 ```
@@ -32,4 +33,5 @@ rake pod:install
 rake
 ```
 
+## License
 This code is released under the MIT License.
